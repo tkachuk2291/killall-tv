@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.killall'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.killall'
+        minSdk 21
+        // targetSdk 28: no QUERY_ALL_PACKAGES needed, matches Android 9 on the stick
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
